@@ -1,0 +1,141 @@
+:root {
+  --bg-color: #eaf4e3;
+  --text-color: #1f1f1f;
+  --subtle-text: #555;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.4s ease;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.college-name {
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 2px; 
+}
+
+.title {
+  font-family: "Lora", serif; 
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 0; 
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.image-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.image-wrapper img {
+  width: 260px;
+  height: 380px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--subtle-text);
+  max-width: 420px;
+}
+
+.toggle-btn {
+  margin-top: 40px;
+  padding: 12px 26px;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+body.alt {
+  background-color: var(--bg-color);
+}
+
+body.alt .title {
+  letter-spacing: -1px;
+}
+
+body.alt .image-wrapper img {
+  width: 260px;
+  height: 380px;
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 46px;
+  }
+
+  body:not(.alt) .title {
+    margin-bottom: -35px;
+  }
+
+  .image-wrapper img {
+    width: 220px;
+    height: 320px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .college-name {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  body:not(.alt) .title {
+    margin-bottom: -28px;
+  }
+
+  .image-wrapper img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .subtitle {
+    font-size: 12.5px;
+    padding: 0 10px;
+  }
+}
+
+body:not(.alt) .title {
+  margin-bottom: -60px; 
+}
